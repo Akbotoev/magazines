@@ -11,11 +11,14 @@ a{
 
 body{
     font-family: "Poppins";
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 .container{
     min-width: 920px;
     padding: 0 10px;
     margin: 0 auto;
+    
 }
 
 .header{
@@ -41,5 +44,49 @@ font-weight: 400;
 font-size: 18px;
 color: #22262a;
 margin-left: 25px;
+}
+
+
+.hero{
+    min-width: 1520px;
+   margin: 0 auto;
+  max-height: 300px;
+  
+}
+
+.menu__icon{
+    background: url('/src/img/iconboxis.png');
+    width: 155px;
+    height: 20px;
+}
+.title__name {
+font-weight: 500;
+font-size: 18px;
+color: #22262a;
+}
+.desc{
+    font-weight: 500;
+    font-size: 18px;
+    color: #22262a;
+}
+.title__text{
+font-weight: 700;
+font-size: 80px;
+color: #22262a;
+}
+.title{
+    position: absolute;
+    top:400px;
+    left: 800px;
+}
+.btn{
+font-weight: 500;
+font-size: 18px;
+text-align: center;
+color: #fff;
+width: 147px;
+height: 35px;
+background: #22262a;
+margin: 0px 20px 10px 0px;
 }
 
