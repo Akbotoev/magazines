@@ -1,4 +1,4 @@
-import couple from '../img/couple.png'
+import couple from '../assets/img/couple.png'
 
 export const Hero = ()=>{
     return(

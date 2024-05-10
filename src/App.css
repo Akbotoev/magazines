@@ -11,7 +11,6 @@ a{
 
 body{
     font-family: "Poppins";
-    overflow-y: hidden;
     overflow-x: hidden;
 }
 .container{
@@ -48,14 +47,14 @@ margin-left: 25px;
 
 
 .hero{
-    min-width: 1520px;
+    background: url(/src/assets/img/couple.png);
+    min-width: 1320px;
    margin: 0 auto;
-  max-height: 300px;
-  
+   height: 730px;
 }
 
 .menu__icon{
-    background: url('/src/img/iconboxis.png');
+    background: url('./assets/img/iconboxis.png');
     width: 155px;
     height: 20px;
 }
@@ -90,3 +89,68 @@ background: #22262a;
 margin: 0px 20px 10px 0px;
 }
 
+.products{
+    padding: 50px 0; 
+    box-shadow:  solid white 1px 1px 3px;
+}
+.products > .grid{
+    display: flex;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px 30px;
+}
+
+.card__wrapper{
+    height: 371px;
+    width: 268px;
+}
+img{
+    width: 100%;
+   
+}
+.cards{
+    margin: 0 auto;
+}
+.card_name{
+    font-family: Poppins;
+font-size: 15px;
+font-weight: 300;
+line-height: 22.5px;
+text-align: left;
+padding-top:50px;
+}
+
+.description__title{
+    font-family: Poppins;
+font-size: 15px;
+font-weight: 600;
+line-height: 22.5px;
+text-align: left;
+}
+
+.card__price{
+    font-family: Poppins;
+font-size: 15px;
+font-weight: 400;
+line-height: 22.5px;
+text-align: left;
+color:#E32636;
+}
+.card__price1{
+    font-family: Poppins;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 22.5px;
+    text-align: left;
+    color:#22262a;
+}
+.price{
+    display: flex;
+    justify-content: space-around;
+    gap: 10%;
+    padding-right: 110px;
+}
+
+.cont{
+    margin-bottom: 50px;
+    text-align:center;
+}
