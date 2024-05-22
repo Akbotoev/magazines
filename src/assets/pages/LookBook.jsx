@@ -1,7 +1,8 @@
 import imgs2 from '../img/woman_run.png';
+import  { FormData } from '../pages/FormData'
 export const LookBook = () =>{
     return (
-        <img src={imgs2} alt='' className='imgs2'/>
+        <FormData/>
     )
 }
 export default LookBook;
