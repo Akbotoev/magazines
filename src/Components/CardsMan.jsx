@@ -1,10 +1,10 @@
 
-export const Cards = ({imgLink,title,desc,newPrice,oldPrice}) =>{
 
+export const CardsMan = ({imgsLink,title,desc,newPrice,oldPrice}) =>{
     return(
         <div className="cards">
         <div className="card__wrapper">
-          <img src={imgLink} alt='img'/>
+          <img src={imgsLink} alt='img'/>
         </div>
         <p className="card_name">{desc}</p>
         <h2 className="description__title">{title} </h2>
@@ -18,4 +18,4 @@ export const Cards = ({imgLink,title,desc,newPrice,oldPrice}) =>{
    
     )
 }
-export default Cards;
+export default CardsMan;

@@ -17,8 +17,10 @@ body{
     min-width: 920px;
     padding: 0 10px;
     margin: 0 auto;
-    
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
 }
+
 
 .header{
     display: flex;
@@ -93,15 +95,24 @@ margin: 0px 20px 10px 0px;
     padding: 50px 0; 
     box-shadow:  solid white 1px 1px 3px;
 }
+.products__man{
+    padding: 50px 0; 
+    box-shadow:  solid white 1px 1px 3px;
+}
 .products > .grid{
-    display: flex;
-    grid-template-columns: repeat(3, 1fr);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 40px 30px;
 }
 
+.cont__man{
+    margin-bottom: 50px;
+    text-align:center;
+}
 .card__wrapper{
     height: 371px;
     width: 268px;
+    
 }
 img{
     width: 100%;
@@ -153,6 +164,7 @@ color:#E32636;
 .cont{
     margin-bottom: 50px;
     text-align:center;
+    
 }
 
 .head{

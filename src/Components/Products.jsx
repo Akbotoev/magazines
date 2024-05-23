@@ -1,10 +1,25 @@
 
+import { useEffect, useState } from "react"
 import { Cards } from "./Casds"
-import img1 from '../assets/img/girl1.png'
-import img2 from '../assets/img/girl2.png'
-import img3 from '../assets/img/girl3.png'
-import img4 from '../assets/img/girl4.png'
-export const Products = () => {
+import axios from "axios"
+
+export const ProductsWomen = () => {
+    
+        const [productMale, setProductMan] = useState([])
+        const [error, SetError] = useState(null)
+    
+        useEffect(() =>{
+            const catchProduct = async() =>{
+                try{
+                    const resp = await axios ("https://fakestoreapi.com/products/category/women's clothing")
+                    const data = resp.data 
+                    setProductMan(data.slice(0,4))
+                }catch(error){
+                    SetError(error.massage)
+                }
+            }
+            catchProduct()
+        }, [])
     return(
         <section className='products'>
             <div className="cont">
@@ -12,36 +27,18 @@ export const Products = () => {
           <p className="desc1">Shop our new arrivals from established brands</p>
           </div>
         <div className="container grid">
-            <Cards 
-            imgLink={img1}
-            desc={"IGURE"}
-            title={"GREEN MUSCLE FIT POLO SHIRT"}
-            newPrice={"$129.00"}
-            oldPrice={"$229.00"}
-            />
-            <Cards 
-            imgLink={img2}
-            desc={"IGURE"}
-            title={"GREEN MUSCLE FIT POLO SHIRT"}
-            newPrice={"$129.00"}
-            oldPrice={"$229.00"}
-            />
-            <Cards 
-            imgLink={img3}
-            desc={"IGURE"}
-            title={"GREEN MUSCLE FIT POLO SHIRT"}
-            newPrice={"$129.00"}
-            oldPrice={"$229.00"}
-            />
-            <Cards 
-            imgLink={img4}
-            desc={"IGURE"}
-            title={"GREEN MUSCLE FIT POLO SHIRT"}
-            newPrice={"$129.00"}
-            oldPrice={"$229.00"}
-            />
+        {productMale.map(item => (
+                        <Cards
+                            key={item.id}
+                            imgLink={item.image} 
+                            desc={item.category}
+                            title={item.title}
+                            newPrice={`$${item.price}`}
+                            oldPrice={`$${item.price + 100}`}
+                        />
+                    ))}
             </div>
             </section>
     )
 }
-export default Products;
+export default ProductsWomen;
